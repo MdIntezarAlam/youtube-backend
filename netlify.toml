@@ -1,7 +1,9 @@
 [build]
-  command = "npm run build"
-  functions = "dist"
-  publish = "dist"
+  functions = "src/functions"  # Make sure this matches your actual functions directory
+  publish = "public"
 
-[dev]
-  command = "npm run dev"
+[functions]
+  node_bundler = "esbuild"
+
+[build.environment]
+  NODE_VERSION = "18"  # Ensure you're using the correct Node.js version
