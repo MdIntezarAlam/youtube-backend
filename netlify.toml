@@ -1,9 +1,10 @@
 [build]
-  functions = "src/functions"  # Make sure this matches your actual functions directory
-  publish = "public"
-
-[functions]
-  node_bundler = "esbuild"
+  functions = "src/functions" # Your serverless functions directory
+  publish = "public" # Adjust if you have a static build output
 
 [build.environment]
-  NODE_VERSION = "18"  # Ensure you're using the correct Node.js version
+  NODE_VERSION = "18" # Specify the Node.js version
+
+[functions]
+  directory = "src/functions"
+  node_bundler = "esbuild"
