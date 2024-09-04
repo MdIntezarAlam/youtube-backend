@@ -17,6 +17,10 @@ app.use(express.json());
 connectDB();
 
 // Use the routes
+app.get('/api/test', (req, res) => {
+    res.json({ message: "Hello from the test route!" });
+});
+
 app.use('/api', testinRouter)
 app.use('/api', userRoutes);
 
