@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = ".next" # Adjust this if your static files are in a different directory
 
 [functions]
-  directory = "src/functions"
+  directory = "dist/functions" # Ensure this is the directory where your functions are located
